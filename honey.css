@@ -30,7 +30,7 @@ header {
 #menu a:hover {
 	color: white;
 }
-#logotipe_with_name {
+#logotype_with_name {
 	display: flex;
 	padding-left: 50pt;
 }
@@ -38,7 +38,7 @@ header a {
 	text-decoration: none; 
 	user-select: none;
 }
-.logotipe_name {
+.logotype_name {
 	padding-top: 30px;
 	padding-left: 10pt;
 	width: 200pt;
