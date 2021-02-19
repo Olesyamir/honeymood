@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HoneyMood - магазин сладостей</title>
+	<link rel="stylesheet" type="text/css" href="honey.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+    $(function(){
+ 	$('.minimized').click(function(event) {
+    var i_path = $(this).attr('src');
+    $('body').append('<div id="overlay"></div><div id="magnify"><img src="'+i_path+'"><div id="close-popup"><i></i></div></div>');
+    $('#magnify').css({
+	    left: ($(document).width() - $('#magnify').outerWidth())/2,
+	    // top: ($(document).height() - $('#magnify').outerHeight())/2 upd: 24.10.2016
+            top: ($(window).height() - $('#magnify').outerHeight())/2
+	  });
+    $('#overlay, #magnify').fadeIn('fast');
+  });
+  
+  $('body').on('click', '#close-popup, #overlay', function(event) {
+    event.preventDefault();
+ 
+    $('#overlay, #magnify').fadeOut('fast', function() {
+      $('#close-popup, #magnify, #overlay').remove();
+    });
+  });
+});
+  </script>
+</head>
+<body>
+<header>
+	<div id="logotipe_with_name">
+		<a href="honey.html"><img src="bokal_crem.png" id="logo"></a>
+		<a href="honey.html"><img src="logotype_white.png" class="logotipe_name"></a>
+	</div>
+	<div id="menu">
+		<a href="honey.html">Главная</a>
+		<a href="#">Ассортимент</a>
+		<a href="#">Подарочные боксы</a>
+		<a href="#">Контакты</a>
+	</div>
+</header>
+<div class="slider">
+	<div class="slider_text">
+		<img src="logotype.png" id="slider_logo">
+		<p>Хотите чего-то необычного? Тогда мы можем вам представить наш магазин сладостей, в котором собраны сладости со всего света. Мы предлагаем сладости из Америки, Кореи и Японии.</p>
+	</div>
+	<img src="sweets1.jpeg" class="slider_img_big minimized">
+	<div class="slider_div_with_img_small">
+		<img src="s2.jpeg" class="slider_img_small minimized">
+		<img src="s3.jpeg" class="slider_img_small minimized">
+		<img src="s4.jpeg" class="slider_img_small minimized">
+	</div>
+</div>
+</body>
+</html>
