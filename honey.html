@@ -6,26 +6,31 @@
 	<link rel="stylesheet" type="text/css" href="honey.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script>
-    $(function(){
- 	$('.minimized').click(function(event) {
-    var i_path = $(this).attr('src');
-    $('body').append('<div id="overlay"></div><div id="magnify"><img src="'+i_path+'"><div id="close-popup"><i></i></div></div>');
-    $('#magnify').css({
-	    left: ($(document).width() - $('#magnify').outerWidth())/2,
-	    // top: ($(document).height() - $('#magnify').outerHeight())/2 upd: 24.10.2016
-            top: ($(window).height() - $('#magnify').outerHeight())/2
-	  });
-    $('#overlay, #magnify').fadeIn('fast');
+	$(document).ready(function(){
+	$('a[href*="#"]').on("click", function(e){
+	var anchor = $(this);
+	$('html, body').stop().animate({
+	scrollTop: $(anchor.attr('href')).offset().top
+	}, 777);
+	e.preventDefault();
+	return false;
+	});
+	});
+</script>
+
+	<script type="text/javascript">
+  $(function() {
+  $(window).scroll(function() {
+  if($(this).scrollTop() != 0) {
+  $('#topNubex').fadeIn();
+  } else {
+  $('#topNubex').fadeOut();
+  }
   });
-  
-  $('body').on('click', '#close-popup, #overlay', function(event) {
-    event.preventDefault();
- 
-    $('#overlay, #magnify').fadeOut('fast', function() {
-      $('#close-popup, #magnify, #overlay').remove();
-    });
+  $('#topNubex').click(function() {
+  $('body,html').animate({scrollTop:0},700);
   });
-});
+  });
   </script>
 </head>
 <body>
@@ -36,9 +41,9 @@
 	</div>
 	<div id="menu">
 		<a href="honey.html">Главная</a>
-		<a href="#">Ассортимент</a>
+		<a href="range.html">Ассортимент</a>
 		<a href="#">Подарочные боксы</a>
-		<a href="#">Контакты</a>
+		<a href="#f">Контакты</a>
 	</div>
 </header>
 <div class="slider">
@@ -53,5 +58,69 @@
 		<img src="s4.jpeg" class="slider_img_small minimized">
 	</div>
 </div>
+<div class="div_about_company">
+	<div class="h_img">
+		<h1>О компании</h1>
+		<img src="heart.png" class="icon_near_h1">
+	</div>
+	<div class="div_about_company_div">
+		<img src="s16.jpg" class="img_bestsellers">
+		<p>Наша компания занимается сладостями со всего света. Мы привозим их со всех уголков нашей планеты. В основном в нашем магазине представлены сладости из Америки, Японии и Кореи. В нашем магазине самые демократичные цены и высокое качество обслуживания покупателей.<br>Наша компания занимается сладостями со всего света. Мы привозим их со всех уголков нашей планеты. В основном в нашем магазине представлены сладости из Америки, Японии и Кореи. В нашем магазине самые демократичные цены и высокое качество обслуживания покупателей.</p>
+	</div>
+</div>
+<div class="div_bestsellers">
+	<div class="h_img">
+		<h1>Хиты продаж</h1>
+		<img src="bag.png" class="icon_near_h1">
+	</div>
+	<div class="products">
+		<div class="product_card">
+			<a href="#">
+				<img src="b1.jpeg" class="img_product">
+				<p>Набор шоколада <br>2500 тг</p>
+			</a>
+		</div>
+		<div class="product_card">
+			<a href="#">
+				<img src="b1.jpeg" class="img_product">
+				<p>Набор шоколада <br>2500 тг</p>
+			</a>
+		</div>
+		<div class="product_card">
+			<a href="#">
+				<img src="b1.jpeg" class="img_product">
+				<p>Набор шоколада <br>2500 тг</p>
+			</a>
+		</div>
+	</div>
+</div>
+<footer id="f">
+	<div class="h_img">
+		<h1>Контакты</h1>
+		<img src="phone.png" class="icon_near_h1">
+	</div>
+	<div class="cave">
+		<img src="footer_sweets.png" class="foot_img">
+		<table border="0" cellspacing="0">
+			<tr>
+				<th><img src="phone_white.png" class="icon_footer"></th>
+				<th>+ 7 777 777 77 77</th>
+			</tr>
+			<tr>
+				<th><img src="phone_white.png" class="icon_footer"></th>
+				<th>+ 7 777 777 77 77</th>
+			</tr><tr>
+				<th><img src="email.png" class="icon_footer"></th>
+				<th>honeymood@gmail.com</th>
+			</tr><tr>
+				<th><img src="insta.png" class="icon_footer"></th>
+				<th>@honeymood</th>
+			</tr>
+		</table>
+		<img src="footer_sweets.png" class="foot_img" style="transform: scale(-1, 1)">
+	</div>
+	
+	
+</footer>
 </body>
 </html>
