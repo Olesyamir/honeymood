@@ -34,9 +34,10 @@ header {
 	display: flex;
 	padding-left: 50pt;
 }
-header a {
+a {
 	text-decoration: none; 
 	user-select: none;
+	color: black;
 }
 .logotype_name {
 	padding-top: 30px;
@@ -63,6 +64,7 @@ p {
 	font-family: Book Antiqua;
 	font-size: 16pt;
 	font-style: italic;
+	text-align: justify;
 }
 .main_text {
 	width: 40%;
@@ -124,4 +126,114 @@ p {
   background-size: 16px 16px;
   display: block;
 }
+h1 {
+	font-family: Book Antiqua;
+	font-size: 34pt;
+	font-style: italic;
+	color: rgb(248, 246, 191);
+	text-align: center;
+	letter-spacing: 0.07em;
+	/*padding: 30pt 0 30pt 38%;*/
+	/*padding: 30pt 0;*/
+}
+.main_div {
+	background-image: url(background.png);
+	background-size: cover;
+	width: 87.5%;
+	height: 500pt;
+	margin: 0 50pt;
+	display: flex;
+	/*align-items: center;*/
+}
+.div_about_company {
+	width: 87.5%;
+	height: 500pt;
+	margin: 0 50pt;
+	background-color: black;
+}
+.img_bestsellers {
+	width: 300pt;
+	height: 300pt;
+	border: solid 5px rgb(142, 91, 183);
+	border-radius: 10%;
+}
+.icon_near_h1 {
+	width: 50pt;
+	height: 40pt;
+	padding-left: 10pt;
+}
+.h_img {
+	display: flex;
+	justify-content: center;
+	padding: 40pt 0;
+}
+.div_about_company_div {
+	display: flex;
+	align-items: center;
+	padding: 0 20pt;
+}
+.div_about_company_div p {
+	color: rgb(142, 91, 183);
+	padding-left: 50pt;
+}
+.div_bestsellers{
+	background-image: url(background_bestsellers.png);
+	background-size: cover;
+	width: 87.5%;
+	height: 400pt;
+	margin: 0 50pt;
+}
+.div_bestsellers h1{
+	color: rgb(142, 91, 183);
+}
+.img_product {
+	width: 180pt;
+	border-radius: 50%;
+	border: solid 5px rgb(142, 91, 183);
+}
+.product_card {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 30%;
+}
+.products {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 30pt;
+}
+.product_card p {
+	text-align: center;
+	padding: 7pt 30pt 0 0;
+}
+.product_card:hover p{
+	color: rgb(142, 91, 183);
+}
+footer {
+	width: 87.5%;
+	height: 200pt;
+	margin: 0 50pt;
+}
+footer .icon_near_h1{
+	width: 40pt
+}
+.foot_img {
+	width: 250pt;
+	height: 200pt;
+}
+th {
+	color: white;
+	font-family: Book Antiqua;
+	font-size: 19pt;
+	font-style: italic;
+	padding-left: 20pt;
+	text-align: left;
+}
+.icon_footer {
+	width: 20pt;
+}
 
+.cave {
+	display: flex;
+	justify-content: space-between;
+}
