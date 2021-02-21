@@ -260,7 +260,12 @@ th {
 	display: flex;
 	justify-content: space-between;
 }
-
+.img_about_company {
+	width: 240pt;
+	height: 240pt;
+	border: solid 5px rgb(142, 91, 183);
+	border-radius: 10%;
+}
 
 
 
