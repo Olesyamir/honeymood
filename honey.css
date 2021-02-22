@@ -302,3 +302,15 @@ h3 {
 	padding: 20pt;
 	font-weight: normal;
 }
+.img_product_info {
+	width: 300pt;
+}
+.h1_smaller {
+	font-size: 27pt;
+}
+.p_price {
+	border: solid 2px rgb(248, 246, 191);
+	padding: 10px;
+	width: 70px;
+	margin: 20pt 0 0 250px;
+}
