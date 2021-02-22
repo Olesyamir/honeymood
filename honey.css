@@ -296,4 +296,9 @@ position: relative;
 	color: white;
 	border: solid 5px rgb(142, 91, 183);
 }
-
+h3 {
+	color: rgb(248, 246, 191);
+	text-align: center;
+	padding: 20pt;
+	font-weight: normal;
+}
