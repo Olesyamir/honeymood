@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HoneyMood - KitKat</title>
+	<link rel="shortcut icon" type="image/x-icon" href="bokal_crem.png">
+	<meta charset="utf-8">
+	<title>HoneyMood - магазин сладостей</title>
+	<link rel="stylesheet" type="text/css" href="honey.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	$('a[href*="#"]').on("click", function(e){
+	var anchor = $(this);
+	$('html, body').stop().animate({
+	scrollTop: $(anchor.attr('href')).offset().top
+	}, 777);
+	e.preventDefault();
+	return false;
+	});
+	});
+</script>
+
+	<script type="text/javascript">
+  $(function() {
+  $(window).scroll(function() {
+  if($(this).scrollTop() != 0) {
+  $('#topNubex').fadeIn();
+  } else {
+  $('#topNubex').fadeOut();
+  }
+  });
+  $('#topNubex').click(function() {
+  $('body,html').animate({scrollTop:0},700);
+  });
+  });
+  </script>
+</head>
+<body>
+<header>
+	<div id="logotype_with_name">
+		<a href="honey.html"><img src="bokal_crem.png" id="logo"></a>
+		<a href="honey.html"><img src="logotype_white.png" class="logotype_name"></a>
+	</div>
+	<div id="menu">
+		<a href="honey.html">Главная</a>
+		<a href="range.html">Ассортимент</a>
+		<a href="gift_boxes.html">Подарочные боксы</a>
+		<a href="#f">Контакты</a>
+	</div>
+</header>
+<div class="div_about_company div_bigger">
+	<div class="h_img">
+		<h1>Японские сладости</h1>
+		<img src="heart.png" class="icon_near_h1">
+	</div>
+	<!-- тут надо доделать дополнительные картинки -->
+	<div class="div_about_company_div">
+		<img src="s7.jpeg" class="img_box img_box_crem img_product_info">
+		<div>
+			<h1 class="h1_smaller">KitKat</h1>
+			<br>
+		<p> Kit Kat из Японии получил изысканные и необыкновенные вкусы по сравнению с обычными, доступными в Великобритании, Америке и Европе!<br>Японский филиал Nestlé очень известен тем, что выпускает небольшие батончики исключительно высокого качества во множестве изысканных (и часто очень необычных!) сезонных ароматов.<br>В Японии Кит-кат часто используют как подарок, потому что KIt-kat похоже на японское «kitto katsu», что означает «вы наверняка выиграете»</p>
+		<p class="p_price">3500 тг</p>
+		</div>
+		
+	</div>
+</div>
+<footer id="f">
+	<div class="h_img">
+		<h1>Контакты</h1>
+		<img src="phone.png" class="icon_near_h1">
+	</div>
+	<div class="cave">
+		<img src="footer_sweets.png" class="foot_img">
+		<table border="0" cellspacing="0">
+			<tr>
+				<th><img src="phone_white.png" class="icon_footer"></th>
+				<th>+ 7 777 777 77 77</th>
+			</tr>
+			<tr>
+				<th><img src="phone_white.png" class="icon_footer"></th>
+				<th>+ 7 777 777 77 77</th>
+			</tr><tr>
+				<th><img src="email.png" class="icon_footer"></th>
+				<th>honeymood@gmail.com</th>
+			</tr><tr>
+				<th><img src="insta.png" class="icon_footer"></th>
+				<th>@honeymood</th>
+			</tr>
+		</table>
+		<img src="footer_sweets.png" class="foot_img" style="transform: scale(-1, 1)">
+	</div>
+	<h3>Copyright © 2021 Miroshnichenko Olesya, Kryukova Elena. All Rights Reserved</h3>
+</footer>
+</body>
+</html>
